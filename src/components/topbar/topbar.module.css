@@ -1,0 +1,27 @@
+.topbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--stipenny-white);
+    height: 60px;
+    padding: 0 2rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+@media (max-width: 767.98px){
+    .topbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .left {
+        display: none;
+    }
+}

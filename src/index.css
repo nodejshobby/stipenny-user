@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ :root {
+  --stipenny-white: #fff;
+  --stipenny-sidebar-bg:#010065;
+ }
+
+html,body, #root {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input.form-control, .form-select {
+  padding-top: .7rem;
+  padding-bottom: .7rem;
+}
+
+.grey {
+  color: #f2f2f2;
+}
+
+.grey-bg {
+  background-color: #f2f2f2;
+}
+
+.toast-right {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  z-index: 99;
 }

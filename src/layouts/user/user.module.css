@@ -1,0 +1,14 @@
+.content {
+    position: relative;
+}
+
+.user {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex: 4;
+    overflow-x: hidden;
+    transition: all ease 500ms;
+}

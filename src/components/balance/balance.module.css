@@ -1,0 +1,12 @@
+.balance {
+    font-weight: bold;
+    color: var(--bs-primary);
+    font-size: 3rem;
+    margin: 1rem 0;
+    user-select: none;
+}
+
+.action {
+    font-size: 18px;
+    user-select: none;
+}

@@ -1,0 +1,105 @@
+.sidebar {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background-color: var(--stipenny-sidebar-bg);
+    color: var(--stipenny-white);
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all ease 500ms;
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.panel {
+    overflow: auto;
+}
+
+.panel::-webkit-scrollbar {
+    display: none;
+}
+
+.link {
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: .3rem 2.5rem;
+    margin-bottom: .5rem;
+    transition: all ease;
+    display: flex;
+    align-items: center;
+}
+
+.link a  {
+    text-decoration: none;
+    color: var(--stipenny-white);
+}
+
+.link:hover {
+    text-decoration: none;
+    background-color: var(--bs-primary);
+    border-radius: 50px;
+}
+
+.profile {
+    border-radius: 50px;
+    background-color: var(--bs-primary);
+    padding: .8rem 1rem;
+}
+
+.profile .name {
+    font-size: .9rem;
+    font-weight: 500;
+    text-overflow: ellipsis;
+}
+
+.iconbox {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
+
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 99;
+        display: none;
+    }
+
+    .iconbox {
+        display: block;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sidebar {
+        flex: 1.6;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .sidebar {
+        flex: 1.2;
+    }
+}
