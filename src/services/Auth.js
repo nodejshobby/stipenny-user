@@ -20,6 +20,21 @@ class Auth {
     const response = await BaseApi.get("/logout");
     return response;
   }
+
+  static async forgot(data) {
+    const response = await BaseApi.post("password/forgot", data);
+    return response;
+  }
+
+  static async reset(data) {
+    const response = await BaseApi.post("password/reset", data);
+    return response;
+  }
+
+  static async verify(url) {
+    const response = await BaseApi.get(url);
+    return response;
+  }
 }
 
 export default Auth;

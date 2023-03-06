@@ -5,6 +5,8 @@ import Register from "./views/register";
 import Login from "./views/login";
 import Dashboard from "./views/dashboard";
 import Forgot from "./views/forgot";
+import Reset from "./views/reset";
+import Verify from "./views/verify";
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const routes = createBrowserRouter([
       {
         path: "/forgot",
         element: <Forgot />,
+      },
+      {
+        path: "/reset",
+        element: <Reset />,
+      },
+      {
+        path: "/verify",
+        element: <Verify />,
       },
     ],
   },
