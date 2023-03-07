@@ -78,8 +78,8 @@ function Reset() {
     <form autoComplete="off" className="h-100" onSubmit={handleReset}>
       <div className="container h-100">
       <div className="row justify-content-center align-items-center h-100">
-        <div className="col-10 col-md-8 col-lg-6 bg-white py-5 px-4 rounded shadow-sm">
-          <h1 className="fw-bold text-center mb-4">Reset your password</h1>
+        <div className="col-10 col-md-8 col-lg-5 bg-white py-5 px-4 rounded shadow-sm">
+          <h2 className="fw-bold text-center mb-4">Reset your password</h2>
           <div className="form-group mb-3">
             <input name="password" className="form-control" type="password" placeholder='Enter your new password' onChange={(e) => setPassword(e.target.value)}/>
             {errors.password && <small className="text-danger">{errors.password}</small>}

@@ -16,7 +16,7 @@ function Guest() {
   },[])
   return (
     <>
-    { message &&  <Alert severity={message.type} color={message.type} className="toast-right">
+    { message &&  <Alert severity={message.type} color={message.type} className="toast-right" sx={{ zIndex: 100 }}>
         {message.message}
       </Alert>
     }

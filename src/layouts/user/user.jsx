@@ -6,7 +6,8 @@ import styles from "./user.module.css"
 import { Alert } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux"
 import AuthService from "../../services/Auth"
-import { setUser } from "../../reducers/authReducer"
+import { setToken, setUser } from "../../reducers/authReducer"
+import { setNotification } from "../../reducers/stipennyReducer";
 
 
 
@@ -17,6 +18,34 @@ function User() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
+  const getUser = async ()=>{
+    try {
+       const response = await AuthService.getUser()
+       if(response.status === 201){
+        const user  = response.data
+        localStorage.setItem("user", JSON.stringify(user))
+        dispatch(setUser(user))
+       }
+    } catch(error){
+      if(error.response.status === 401){
+        dispatch(setNotification({type: "error", message: "Expired or invalid Token/Session"}))
+        setTimeout(()=>{
+           dispatch(setUser(null))
+          dispatch(setToken(null))
+          dispatch(setNotification(null))
+          navigate("/login")
+        }, 5000)
+      }
+      else {
+        dispatch(setNotification({type: "error", message: "Something went wrong!"}))
+      setTimeout(()=>{
+        dispatch(setNotification(null))
+      }, 5000)
+      }
+      
+    }
+   }
+
   
    useEffect(() => { 
     
@@ -24,20 +53,13 @@ function User() {
       navigate("/login")
     }
     
-    (async ()=>{
-    try {
-       const response = await AuthService.getUser()
-      const user  = response.data
-      localStorage.setItem("user", JSON.stringify(user))
-      dispatch(setUser(user))
-    } catch(error){
-      console.log(error)
-    }
-   })() }, [])
+    getUser()
+  // eslint-disable-next-line
+  }, [])
 
   return (
     <>
-    { message &&  <Alert severity={message.type} color={message.type} className="toast-right">
+    { message &&  <Alert severity={message.type} color={message.type} className="toast-right" sx={{ zIndex: 100 }}>
         {message.message}
       </Alert>
     }

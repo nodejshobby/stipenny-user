@@ -7,6 +7,11 @@ import Dashboard from "./views/dashboard";
 import Forgot from "./views/forgot";
 import Reset from "./views/reset";
 import Verify from "./views/verify";
+import Stipends from "./views/stipends";
+import Transactions from "./views/transactions";
+import Bills from "./views/bills";
+import Banks from "./views/banks";
+import Settings from "./views/settings";
 
 const routes = createBrowserRouter([
   {
@@ -29,10 +34,6 @@ const routes = createBrowserRouter([
         path: "/reset",
         element: <Reset />,
       },
-      {
-        path: "/verify",
-        element: <Verify />,
-      },
     ],
   },
   {
@@ -43,7 +44,31 @@ const routes = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />,
       },
+      {
+        path: "/stipends",
+        element: <Stipends />,
+      },
+      {
+        path: "/transactions",
+        element: <Transactions />,
+      },
+      {
+        path: "/bills",
+        element: <Bills />,
+      },
+      {
+        path: "/bank",
+        element: <Banks />,
+      },
+      {
+        path: "/settings",
+        element: <Settings />,
+      },
     ],
+  },
+  {
+    path: "/verify",
+    element: <Verify />,
   },
 ]);
 

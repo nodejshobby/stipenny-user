@@ -55,8 +55,8 @@ function Register() {
     <form autoComplete="off" className="h-100" onSubmit={handleRegister}>
       <div className="container h-100">
       <div className="row justify-content-center align-items-center h-100">
-        <div className="col-10 col-md-8 col-lg-6 bg-white py-5 px-4 rounded shadow-sm">
-          <h1 className="fw-bold text-center mb-4">Create new account</h1>
+        <div className="col-10 col-md-8 col-lg-5 bg-white py-5 px-4 rounded shadow-sm">
+          <h2 className="fw-bold text-center mb-4">Create new account</h2>
           <div className="row mb-3">
             <div className="col">
               <input className="form-control" name="firstname" type="text" placeholder='First name' onChange={handleFormChange} value={formValues.firstname}/>

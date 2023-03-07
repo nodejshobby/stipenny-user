@@ -27,7 +27,7 @@ input.form-control, .form-select {
 }
 
 .toast-right {
-  position: absolute;
+  position: fixed;
   top: 30px;
   right: 20px;
   z-index: 99;

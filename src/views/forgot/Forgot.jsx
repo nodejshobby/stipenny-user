@@ -38,14 +38,15 @@ function Forgot() {
     <form autoComplete="off" className="h-100" onSubmit={handleForgot}>
       <div className="container h-100">
       <div className="row justify-content-center align-items-center h-100">
-        <div className="col-10 col-md-8 col-lg-6 bg-white py-5 px-4 rounded shadow-sm">
-          <h1 className="fw-bold text-center mb-4">Forgot your password</h1>
+        <div className="col-10 col-md-8 col-lg-5 bg-white py-5 px-4 rounded shadow-sm">
+          <h2 className="fw-bold text-center mb-4">Forgot your password</h2>
           <div className="form-group mb-4">
             <input name="email" className="form-control" type="email" placeholder='Enter your email' onChange={(e) => setEmail(e.target.value)} required/>
             {errors.email && <small className="text-danger">{errors.email}</small>}
           </div>
           <div className="d-flex flex-wrap justify-content-between align-items-center">
               <button type="submit" className="btn btn-primary fw-bold py-3 px-4" disabled={isProcessingForm && "disabled" }>Forgot</button>
+              <a className="text-decoration-none" href="/login">Back to Login</a>
           </div>
         </div>
       </div>

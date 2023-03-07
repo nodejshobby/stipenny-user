@@ -26,6 +26,7 @@ function Login() {
     if(StoreToken && StoreUser){
       navigate("/dashboard")
     }
+    // eslint-disable-next-line
   },[])
   
 
@@ -65,7 +66,6 @@ function Login() {
     }
     else{
       dispatch(setNotification({ type: "error", message: "Something went wrong!" }))
-      console.log(error)
       setTimeout(()=>{
           dispatch(setNotification(null))
       }, 5000)
@@ -79,8 +79,8 @@ function Login() {
     <form autoComplete="off" className="h-100" onSubmit={handleLogin}>
       <div className="container h-100">
       <div className="row justify-content-center align-items-center h-100">
-        <div className="col-10 col-md-8 col-lg-6 bg-white py-5 px-4 rounded shadow-sm">
-          <h1 className="fw-bold text-center mb-4">Enter your details</h1>
+        <div className="col-10 col-md-8 col-lg-5 bg-white py-5 px-4 rounded shadow-sm">
+          <h2 className="fw-bold text-center mb-4">Enter your details</h2>
           <div className="form-group mb-3">
             <input name="userId" className="form-control" type="text" placeholder='Email or Phone number' onChange={handleFormChange} />
             {errors.userId && <small className="text-danger">{errors.userId}</small>}

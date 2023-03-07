@@ -74,28 +74,28 @@ function Sidebar({ user }) {
             </div>
             <div className={styles.link}>
                 <span className={styles.icon}></span>
-               <a href="/dashboard"><CurrencyExchangeIcon /> Transactions</a> 
+               <a href="/transactions"><CurrencyExchangeIcon /> Transactions</a> 
             </div>
              <div className={styles.link}>
-               <a href="/dashboard"><FormatListBulletedIcon /> Stipends</a> 
+               <a href="/stipends"><FormatListBulletedIcon /> Stipends</a> 
             </div>
             <div className={styles.link}>
                 <span className={styles.icon}></span>
-               <a href="/dashboard"><PaidIcon /> Bills & Payment</a> 
-            </div>
-
-            <div className={styles.link}>
-                <span className={styles.icon}></span>
-               <a href="/dashboard"><CreditCardIcon /> Bank & Card</a> 
+               <a href="/bills"><PaidIcon /> Bills & Payment</a> 
             </div>
 
             <div className={styles.link}>
                 <span className={styles.icon}></span>
-               <a href="/dashboard"><SettingsIcon /> Settings</a> 
+               <a href="/bank"><CreditCardIcon /> Bank & Card</a> 
+            </div>
+
+            <div className={styles.link}>
+                <span className={styles.icon}></span>
+               <a href="/settings"><SettingsIcon /> Settings</a> 
             </div>
             <div className={styles.link}>
                 <span className={styles.icon}></span>
-               <a href="/dashboard" onClick={handleLogout}><PowerSettingsNewIcon/> Logout</a> 
+               <a href="/logout" onClick={handleLogout}><PowerSettingsNewIcon/> Logout</a> 
             </div>
         </div>
 
